@@ -71,6 +71,7 @@ class CloudFormationTemplateContext
         Group: null
         InstanceProfile: null
         Policy: null
+        Role: null
         User: null
         UserToGroupAddition: null
       RDS:
