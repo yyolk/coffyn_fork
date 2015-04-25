@@ -178,7 +178,11 @@ class CloudFormationTemplateContext
     'Fn::Base64': arg
   GetAZs: (arg) ->
     'Fn::GetAZs': arg
+  AccountId: Ref: 'AWS::AccountId'
+  NotificationARNs: Ref: 'AWS::NotificationARNs'
+  NoValue: Ref: 'AWS::NoValue'
   Region: Ref: 'AWS::Region'
+  StackId: Ref: 'AWS::StackId'
   StackName: Ref: 'AWS::StackName'
   InitScript: (arg) ->
     existsSyncFunc = if fs.existsSync? then fs.existsSync else path.existsSync
