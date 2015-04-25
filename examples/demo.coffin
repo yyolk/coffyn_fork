@@ -32,7 +32,7 @@ openPort = (port) ->
   CidrIp:      '0.0.0.0/0'
 
 @AWS.EC2.SecurityGroup 'securityGroup',
-  GroupDescription: 'webserver ssh'
+  GroupDescription: 'webserver security group'
   SecurityGroupIngress: [
     openPort('22'),
     #params are referenced like:  @Param.<name>
