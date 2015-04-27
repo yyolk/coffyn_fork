@@ -126,7 +126,7 @@ class CloudFormationTemplateContext
 
   _resourceByType: (type, name, props) =>
     result = {}
-    if props?.Metadata? or props?.Properties?
+    if props?.Metadata? or props?.Properties? or props?.DependsOn?
       result[name] = props
       result[name].Type = type
     else
