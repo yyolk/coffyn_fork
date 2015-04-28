@@ -40,7 +40,7 @@ compileTemplate = (source, params, callback) =>
     tabbedLines.push '  return'
     code = tabbedLines.join '\n'
     code = pre + code
-    compiled = CoffeeScript.compile code, {source, bare: false}
+    compiled = CoffeeScript.compile code, {source, bare: true}
     template = eval compiled, source
     templateString = if commander.pretty then JSON.stringify template, null, 2 else JSON.stringify template
     callback? templateString

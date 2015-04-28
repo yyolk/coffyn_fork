@@ -1,6 +1,6 @@
 {
   "name":         "coffin",
-  "version":      "0.2.3",
+  "version":      "0.2.4",
   "description":  "Coffee dsl for aws cloudformation",
   "keywords":     ["coffeescript", "coffee-script", "aws", "cloudformation"],
   "author":       "Chris Jones <chris.f.jones@gmail.com> (https://github.com/chrisfjones/)",
@@ -16,7 +16,7 @@
        "url": "http://github.com/chrisfjones/coffin/issues"
   },
   "engines":      {
-    "node":       ">=0.4.0"
+    "node":       ">=0.8.0"
   },
   "directories" : {
     "lib" : "./lib"
@@ -29,7 +29,7 @@
      "test": "(cd test; coffee templateTests.coffee)"
    },
   "dependencies": {
-      "coffee-script":  "1.1.x",
+      "coffee-script":  "1.9.x",
       "commander":      "0.4.x",
       "pkginfo":        "0.2.x",
       "colors":         "0.5.x"
