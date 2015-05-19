@@ -18,6 +18,7 @@ class CloudFormationTemplateContext
         AutoScalingGroup: null
         LaunchConfiguration: null
         ScalingPolicy: null
+        ScheduledAction: null
         Trigger: null
       CloudFormation:
         Authentication: null
