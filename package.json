@@ -10,15 +10,13 @@
     "Ole Michaelis (https://github.com/nesQuick)",
     "Joseph Yølk Chiocchi (https://github.com/yyolk)"
   ],
-  "homepage":     "http://chrisfjones.github.com/coffin",
-  "repositories": [
-       {
-            "type": "git",
-            "url": "git@github.com:chrisfjones/coffin.git"
-       }
-  ],
+  "homepage":     "http://yyolk.github.com/coffin",
+  "repository": {
+      "type": "git",
+      "url": "git@github.com:yyolk/coffin.git"
+  },
   "bugs": {
-       "url": "http://github.com/chrisfjones/coffin/issues"
+       "url": "http://github.com/yyolk/coffin/issues"
   },
   "engines":      {
     "node":       ">=0.8.0"
