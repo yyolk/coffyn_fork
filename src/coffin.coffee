@@ -76,6 +76,11 @@ class CloudFormationTemplateContext
         Role: null
         User: null
         UserToGroupAddition: null
+      Kinesis:
+        Stream: null
+      Logs:
+        LogGroup: null
+        MetricFilter: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
