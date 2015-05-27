@@ -1,3 +1,7 @@
+coffin@0.2.8 - 5-25-2015
+------------------------
+- Added support for Logs, KinesisStream
+
 coffin@0.2.2 - 8-29-2012
 ---------------------------
 - Added support for DynamoDB, SDB, VPC
