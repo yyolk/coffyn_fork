@@ -1,3 +1,8 @@
+coffin@0.2.9 - 5-25-2015
+------------------------
+- Added support for ASG CreationPolicy
+
+
 coffin@0.2.8 - 5-25-2015
 ------------------------
 - Added support for Logs, KinesisStream
