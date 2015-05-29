@@ -185,6 +185,11 @@ class CloudFormationTemplateContext
     'Fn::Base64': arg
   GetAZs: (arg) ->
     'Fn::GetAZs': arg
+  Select: (index, args...) ->
+    if args.length is 1 and (args[0] instanceof Array)
+      'Fn::Select': [ index, args[0] ]
+    else
+      'Fn::Select': [ index, args ]
   AccountId: Ref: 'AWS::AccountId'
   NotificationARNs: Ref: 'AWS::NotificationARNs'
   NoValue: Ref: 'AWS::NoValue'
