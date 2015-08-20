@@ -81,6 +81,8 @@ class CloudFormationTemplateContext
       Logs:
         LogGroup: null
         MetricFilter: null
+      Lambda:
+        Function: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
