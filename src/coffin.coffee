@@ -252,7 +252,7 @@ module.exports = (func) ->
   template.Mappings    = context._mappings    if context._mappings?
   template.Resources   = context._resources
   template.Outputs     = context._outputs
-  template.Conditions  = context._conditions if context._conditions?
+  template.Conditions  = context._conditions  if context._conditions?
   template
 
 require('pkginfo')(module, 'version')
