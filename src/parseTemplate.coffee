@@ -191,6 +191,14 @@ convertOutput = (name, val) ->
 
   return output + "\n\n"
 
+convertCondition = (name, intrinsicfn) ->
+  throw new Error "missing intrinsicfn for condition with #{name}" if not intrinsicfn
+  output = 
+    """
+      @Condition \"#{name}\",
+    """
+  output += convertJson intrinsicfn
+  return output + "\n\n"
 
 convertTopLevel = (params, converter) ->
   output = ""
@@ -225,6 +233,8 @@ convertToCoffin = (templateObj) ->
         output += convertTopLevel val, convertResource
       when "Outputs"
         output += convertTopLevel val, convertOutput
+      when "Conditions"
+        output += convertTopLevel val, convertCondition
       else
         console.log "don't have key #{key}"
 

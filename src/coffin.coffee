@@ -10,9 +10,11 @@ class CloudFormationTemplateContext
     @_mappings    = null
     @_outputs     = {}
     @_description = null
+    @_conditions  = null
     @Params       = {}
     @Resources    = {}
     @Mappings     = {}
+    @Conditions   = {}
     @AWS =
       AutoScaling:
         AutoScalingGroup: null
@@ -136,7 +138,7 @@ class CloudFormationTemplateContext
 
   _resourceByType: (type, name, props) =>
     result = {}
-    if props?.Metadata? or props?.Properties? or props?.DependsOn? or props?.UpdatePolicy? or props?.CreationPolicy?
+    if props?.Metadata? or props?.Properties? or props?.DependsOn? or props?.UpdatePolicy? or props?.CreationPolicy? or props?.Condition?
       result[name] = props
       result[name].Type = type
     else
@@ -167,6 +169,12 @@ class CloudFormationTemplateContext
         Value: args[1]
     @_set result, @_outputs
 
+  Condition: (name, intrinsicfn) =>
+    @_conditions ?= {}
+    result = {}
+    result[name] = intrinsicfn
+    @_set result, @_conditions
+
   Description: (d) => @_description = d
 
   Tag: (key, val) ->
@@ -189,9 +197,25 @@ class CloudFormationTemplateContext
     'Fn::GetAZs': arg
   Select: (index, args...) ->
     if args.length is 1 and (args[0] instanceof Array)
-      'Fn::Select': [ index, args[0] ]
+      'Fn::Select': [index, args[0]]
     else
-      'Fn::Select': [ index, args ]
+      'Fn::Select': [index, args]
+  And: (condition, conditions...) ->
+    if conditions.length is 1 and (conditions[0] instanceof Array)
+      'Fn::And': [condition, conditions[0]]
+    else
+      'Fn::And': [condition, conditions]
+  Equals: (value_1, value_2) ->
+    'Fn::Equals': [ value_1, value_2 ]
+  If: (condition, value_if_true, value_if_false) ->
+    'Fn::If': [condition, value_if_true, value_if_false]
+  Not: (condition) ->
+    'Fn::Not': [condition]
+  Or: (condition, conditions...) ->
+    if conditions.length is 1 and (conditions[0] instanceof Array)
+      'Fn::Or': [condition, conditions[0]]
+    else
+      'Fn::Or': [condition, conditions]
   AccountId: Ref: 'AWS::AccountId'
   NotificationARNs: Ref: 'AWS::NotificationARNs'
   NoValue: Ref: 'AWS::NoValue'
@@ -228,6 +252,7 @@ module.exports = (func) ->
   template.Mappings    = context._mappings    if context._mappings?
   template.Resources   = context._resources
   template.Outputs     = context._outputs
+  template.Conditions  = context._conditions  if context._conditions?
   template
 
 require('pkginfo')(module, 'version')
