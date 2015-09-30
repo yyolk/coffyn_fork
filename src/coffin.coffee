@@ -109,6 +109,8 @@ class CloudFormationTemplateContext
       String: (name, arg1, arg2) =>             @_paramByType 'String', name, arg1, arg2
       Number: (name, arg1, arg2) =>             @_paramByType 'Number', name, arg1, arg2
       CommaDelimitedList: (name, arg1, arg2) => @_paramByType 'CommaDelimitedList', name, arg1, arg2
+      AWS: (type, name, arg1, arg2) => @_paramByType "AWS::#{type}", name, arg1, arg2
+      AWSList: (type, name, arg1, arg2) => @_paramByType "List<#{type}>", name, arg1, arg2
     @_buildCall null, null, 'AWS', @AWS
 
   _paramByType: (type, name, arg1, arg2) =>
