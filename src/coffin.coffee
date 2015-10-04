@@ -33,7 +33,7 @@ class CloudFormationTemplateContext
         Distribution: null
       CloudWatch:
         Alarm: null
-      CodeDeploy
+      CodeDeploy:
         Application: null
         DeploymentConfig: null
         DeploymentGroup: null
@@ -91,6 +91,11 @@ class CloudFormationTemplateContext
         Function: null
         Permission: null
         EventSourceMapping: null
+      OpsWorks:
+        App: null
+        Instance: null
+        Layer: null
+        Stack: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
