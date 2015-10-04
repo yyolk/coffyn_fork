@@ -85,6 +85,8 @@ class CloudFormationTemplateContext
         MetricFilter: null
       Lambda:
         Function: null
+        Permission: null
+        EventSourceMapping: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
