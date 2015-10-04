@@ -37,6 +37,8 @@ class CloudFormationTemplateContext
         Application: null
         DeploymentConfig: null
         DeploymentGroup: null
+      DataPipeline:
+        Pipeline: null
       DynamoDB:
         Table: null
       EC2:
