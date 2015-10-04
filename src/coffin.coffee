@@ -100,6 +100,8 @@ class CloudFormationTemplateContext
       Route53:
         RecordSet: null
         RecordSetGroup: null
+        HostedZone: null
+        HealthCheck: null
       SDB:
         Domain: null
       S3:
