@@ -85,6 +85,11 @@ class CloudFormationTemplateContext
         MetricFilter: null
       Lambda:
         Function: null
+      OpsWorks:
+        App: null
+        Instance: null
+        Layer: null
+        Stack: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
