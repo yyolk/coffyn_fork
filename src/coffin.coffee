@@ -107,6 +107,11 @@ class CloudFormationTemplateContext
         Instance: null
         Layer: null
         Stack: null
+      Redshift:
+        Cluster: null
+        ClusterParameterGroup: null
+        ClusterSecurityGroup: null
+        ClusterSubnetGroup: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
