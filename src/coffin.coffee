@@ -33,6 +33,10 @@ class CloudFormationTemplateContext
         Distribution: null
       CloudWatch:
         Alarm: null
+      CodeDeploy
+        Application: null
+        DeploymentConfig: null
+        DeploymentGroup: null
       DynamoDB:
         Table: null
       EC2:
