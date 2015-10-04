@@ -66,6 +66,10 @@ class CloudFormationTemplateContext
         VPCGatewayAttachment: null
         VPNConnection: null
         VPNGateway: null
+      ECS:
+        Cluser: null
+        Service: null
+        TaskDefinition: null
       ElastiCache:
         CacheCluster: null
         ParameterGroup: null
