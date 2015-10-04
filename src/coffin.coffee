@@ -70,6 +70,9 @@ class CloudFormationTemplateContext
         Environment: null
       ElasticLoadBalancing:
         LoadBalancer: null
+      EFS:
+        FileSystem: null
+        MountTarget: null
       IAM:
         AccessKey: null
         Group: null
