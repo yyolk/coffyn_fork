@@ -33,6 +33,10 @@ class CloudFormationTemplateContext
         Distribution: null
       CloudWatch:
         Alarm: null
+      CodeDeploy:
+        Application: null
+        DeploymentConfig: null
+        DeploymentGroup: null
       DynamoDB:
         Table: null
       EC2:
@@ -85,6 +89,8 @@ class CloudFormationTemplateContext
         MetricFilter: null
       Lambda:
         Function: null
+        Permission: null
+        EventSourceMapping: null
       OpsWorks:
         App: null
         Instance: null
@@ -99,6 +105,8 @@ class CloudFormationTemplateContext
       Route53:
         RecordSet: null
         RecordSetGroup: null
+        HostedZone: null
+        HealthCheck: null
       SDB:
         Domain: null
       S3:
