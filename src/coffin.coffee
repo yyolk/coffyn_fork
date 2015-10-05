@@ -33,6 +33,14 @@ class CloudFormationTemplateContext
         Distribution: null
       CloudWatch:
         Alarm: null
+      CodeDeploy:
+        Application: null
+        DeploymentConfig: null
+        DeploymentGroup: null
+      CloudTrail:
+        Trail: null
+      DataPipeline:
+        Pipeline: null
       DynamoDB:
         Table: null
       EC2:
@@ -60,6 +68,10 @@ class CloudFormationTemplateContext
         VPCGatewayAttachment: null
         VPNConnection: null
         VPNGateway: null
+      ECS:
+        Cluser: null
+        Service: null
+        TaskDefinition: null
       ElastiCache:
         CacheCluster: null
         ParameterGroup: null
@@ -67,9 +79,14 @@ class CloudFormationTemplateContext
         SecurityGroupIngress: null
       ElasticBeanstalk:
         Application: null
+        ApplicationVersion: null
         Environment: null
+        ConfigurationTemplate: null
       ElasticLoadBalancing:
         LoadBalancer: null
+      EFS:
+        FileSystem: null
+        MountTarget: null
       IAM:
         AccessKey: null
         Group: null
@@ -85,6 +102,18 @@ class CloudFormationTemplateContext
         MetricFilter: null
       Lambda:
         Function: null
+        Permission: null
+        EventSourceMapping: null
+      OpsWorks:
+        App: null
+        Instance: null
+        Layer: null
+        Stack: null
+      Redshift:
+        Cluster: null
+        ClusterParameterGroup: null
+        ClusterSecurityGroup: null
+        ClusterSubnetGroup: null
       RDS:
         DBInstance: null
         DBParameterGroup: null
@@ -94,6 +123,8 @@ class CloudFormationTemplateContext
       Route53:
         RecordSet: null
         RecordSetGroup: null
+        HostedZone: null
+        HealthCheck: null
       SDB:
         Domain: null
       S3:
