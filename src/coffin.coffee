@@ -79,7 +79,9 @@ class CloudFormationTemplateContext
         SecurityGroupIngress: null
       ElasticBeanstalk:
         Application: null
+        ApplicationVersion: null
         Environment: null
+        ConfigurationTemplate: null
       ElasticLoadBalancing:
         LoadBalancer: null
       EFS:
