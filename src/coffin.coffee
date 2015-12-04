@@ -37,6 +37,15 @@ class CloudFormationTemplateContext
         Application: null
         DeploymentConfig: null
         DeploymentGroup: null
+      CodePipeline:
+        Pipeline: null
+        CustomActionType: null
+      Config:
+        ConfigRule: null
+        ConfigurationRecorder: null
+        DeliveryChannel: null
+      DirectoryService:
+        SimpleAD: null
       CloudTrail:
         Trail: null
       DataPipeline:
@@ -53,6 +62,7 @@ class CloudFormationTemplateContext
         NetworkAcl: null
         NetworkAclEntry: null
         NetworkInterface: null
+        PlacementGroup: null
         Route: null
         RouteTable: null
         SecurityGroup: null
@@ -61,20 +71,23 @@ class CloudFormationTemplateContext
         Subnet: null
         SubnetNetworkAclAssociation: null
         SubnetRouteTableAssociation: null
+        SpotFleet: null
         Volume: null
         VolumeAttachment: null
         VPC: null
         VPCDHCPOptionsAssociation: null
+        VPCEndpoint: null
         VPCGatewayAttachment: null
         VPNConnection: null
         VPNGateway: null
       ECS:
-        Cluser: null
+        Cluster: null
         Service: null
         TaskDefinition: null
       ElastiCache:
         CacheCluster: null
         ParameterGroup: null
+        ReplicationGroup: null
         SecurityGroup: null
         SecurityGroupIngress: null
       ElasticBeanstalk:
@@ -91,19 +104,23 @@ class CloudFormationTemplateContext
         AccessKey: null
         Group: null
         InstanceProfile: null
+        ManagedPolicy: null
         Policy: null
         Role: null
         User: null
         UserToGroupAddition: null
       Kinesis:
         Stream: null
+      KMS:
+        Key: null
       Logs:
         LogGroup: null
         MetricFilter: null
+        SubscriptionFilter: null
       Lambda:
+        EventSourceMapping: null
         Function: null
         Permission: null
-        EventSourceMapping: null
       OpsWorks:
         App: null
         Instance: null
@@ -115,11 +132,15 @@ class CloudFormationTemplateContext
         ClusterSecurityGroup: null
         ClusterSubnetGroup: null
       RDS:
+        DBCluster: null
+        DBClusterParameterGroup: null
         DBInstance: null
         DBParameterGroup: null
         DBSubnetGroup: null
         DBSecurityGroup: null
         DBSecurityGroupIngress: null
+        EventSubscription: null
+        OptionGroup: null
       Route53:
         RecordSet: null
         RecordSetGroup: null
@@ -136,12 +157,16 @@ class CloudFormationTemplateContext
       SQS:
         Queue: null
         QueuePolicy: null
+      SSM:
+        Document: null
+      WorkSpaces:
+        Workspace: null
     @Param =
       String: (name, arg1, arg2) =>             @_paramByType 'String', name, arg1, arg2
       Number: (name, arg1, arg2) =>             @_paramByType 'Number', name, arg1, arg2
       CommaDelimitedList: (name, arg1, arg2) => @_paramByType 'CommaDelimitedList', name, arg1, arg2
       AWS: (type, name, arg1, arg2) => @_paramByType "AWS::#{type}", name, arg1, arg2
-      AWSList: (type, name, arg1, arg2) => @_paramByType "List<#{type}>", name, arg1, arg2
+      AWSList: (type, name, arg1, arg2) => @_paramByType "List<AWS::#{type}>", name, arg1, arg2
     @_buildCall null, null, 'AWS', @AWS
 
   _paramByType: (type, name, arg1, arg2) =>
