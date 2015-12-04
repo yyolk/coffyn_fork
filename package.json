@@ -1,6 +1,6 @@
 {
   "name":         "coffyn",
-  "version":      "0.3.5",
+  "version":      "0.3.6",
   "description":  "Coffee dsl for aws cloudformation",
   "keywords":     ["coffeescript", "coffee-script", "aws", "cloudformation"],
   "author":       "Joseph Yølk Chiocchi <joe@yolk.cc> (https://github.com/yyolk)",
@@ -32,7 +32,7 @@
      "test": "(cd test; coffee templateTests.coffee)"
    },
   "dependencies": {
-      "coffee-script":  "1.9.x",
+      "coffee-script":  "1.10.x",
       "commander":      "0.4.x",
       "pkginfo":        "0.2.x",
       "colors":         "0.5.x"
