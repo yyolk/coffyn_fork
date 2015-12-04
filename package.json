@@ -1,14 +1,14 @@
 {
-  "name":         "coffin",
-  "version":      "0.3.1",
+  "name":         "coffyn",
+  "version":      "0.3.5",
   "description":  "Coffee dsl for aws cloudformation",
   "keywords":     ["coffeescript", "coffee-script", "aws", "cloudformation"],
-  "author":       "Chris Jones <chris.f.jones@gmail.com> (https://github.com/chrisfjones/)",
+  "author":       "Joseph Yølk Chiocchi <joe@yolk.cc> (https://github.com/yyolk)",
   "contributors": [
+    "Chris Jones <chris.f.jones@gmail.com> (https://github.com/chrisfjones/)",
     "Addison Higham (https://github.com/addisonj)",
     "Aaron Bento (https://github.com/rkive)",
-    "Ole Michaelis (https://github.com/nesQuick)",
-    "Joseph Yølk Chiocchi (https://github.com/yyolk)"
+    "Ole Michaelis (https://github.com/nesQuick)"
   ],
   "homepage":     "http://yyolk.github.com/coffin",
   "repository": {
