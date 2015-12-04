@@ -1,6 +1,6 @@
 {
   "name":         "coffyn",
-  "version":      "0.3.6",
+  "version":      "0.3.7",
   "description":  "Coffee dsl for aws cloudformation",
   "keywords":     ["coffeescript", "coffee-script", "aws", "cloudformation"],
   "author":       "Joseph Yølk Chiocchi <joe@yolk.cc> (https://github.com/yyolk)",
