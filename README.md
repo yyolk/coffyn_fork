@@ -2,7 +2,7 @@
 
 # Coffyn
 
-## [Nails](https://github.com/yyolk/nails)
+## [Nayls](https://github.com/yyolk/nayls)
 
 ### Run coffin with Docker container
 ```
